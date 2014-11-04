@@ -7,9 +7,13 @@ Amazing isn't it? a game made with no time? yup! enjoy it!
 
 
 The rules: 
+
 	1- no one talk about fight club
+
 	2- DO NOT TOUCH BLACK THINGS IF YOU DONT WANT TO START AGAIN
+
 	3- try to reach the other side of the window to window
+
 	4- Enjoy it. (it is a rule, so if you are not enjoying the game is because you are not following the rules)
 
 
