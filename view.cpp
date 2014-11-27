@@ -110,8 +110,8 @@ int main(){
 			py = image.getSize().y*destiy/tbackground.getSize().y/background.getScale().y;
 			
 	       if(image.getPixel(px,py) != sf::Color::Black) {
-				playerPosition.x += movx;
-				playerPosition.y += movy;
+				playerPosition.x = destix;
+				playerPosition.y = destiy;
 			}
 			else {
 				playerPosition.x = spriteSize.x;
@@ -134,8 +134,8 @@ int main(){
 			if(!pTexture.loadFromFile("sprites3.png")) std::cout << "personatge Not Loaded " << std::endl;
 			if(!image.loadFromFile("ground2.png")) std::cout << "ground Image Not Loaded " << std::endl;
 			if(!tbackground.loadFromImage(image)) std::cout << "background texture Not Loaded " << std::endl;
-			playerPosition.x = spriteSize.x;
-			playerPosition.y = spriteSize.y;
+			playerPosition.x = 1;
+			playerPosition.y = 1;
 		}
         else if (playerPosition.y < 0) playerPosition.y = 0;
         else if (playerPosition.y > aux) {
