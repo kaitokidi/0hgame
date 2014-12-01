@@ -100,8 +100,8 @@ int main(){
         }
         
         //Calcula el desti del player
-        int destix = playerPosition.x+movx;
-        int destiy = playerPosition.y+movy;
+        float destix = playerPosition.x+movx;
+        float destiy = playerPosition.y+movy;
     
         //Calcula l'equivalent del punt de la pantalla on esta el player en la imatge de background
 		float px, py;
@@ -110,8 +110,8 @@ int main(){
 			py = image.getSize().y*destiy/tbackground.getSize().y/background.getScale().y;
 			
 	       if(image.getPixel(px,py) != sf::Color::Black) {
-				playerPosition.x += movx;
-				playerPosition.y += movy;
+				playerPosition.x = destix;
+				playerPosition.y = destiy;
 			}
 			else {
 				playerPosition.x = spriteSize.x;
@@ -139,8 +139,8 @@ int main(){
 		}
         else if (playerPosition.y < 0) playerPosition.y = 0;
         else if (playerPosition.y > aux) {
-			playerPosition.x = spriteSize.x;
-			playerPosition.y = spriteSize.y;
+			playerPosition.x = 1;
+			playerPosition.y = 1;
 		}
         
         
