@@ -109,18 +109,18 @@ int main(){
 			px = image.getSize().x*destix/tbackground.getSize().x/background.getScale().x;
 			py = image.getSize().y*destiy/tbackground.getSize().y/background.getScale().y;
 			
-	       if(image.getPixel(px,py) != sf::Color::Black) {
+	       		if(image.getPixel(px,py) != sf::Color::Black) {
 				playerPosition.x = destix;
 				playerPosition.y = destiy;
 			}
 			else {
-				playerPosition.x = spriteSize.x;
-				playerPosition.y = spriteSize.y;
+				playerPosition.x = 1;
+				playerPosition.y = 1;
 			}
 		}
 		else {
-			playerPosition.x = spriteSize.x;
-			playerPosition.y = spriteSize.y;
+			playerPosition.x = 1;
+			playerPosition.y = 1;
 		}
         
         //Setting movement variables to 0
