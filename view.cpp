@@ -100,8 +100,8 @@ int main(){
         }
         
         //Calcula el desti del player
-        int destix = playerPosition.x+movx;
-        int destiy = playerPosition.y+movy;
+        float destix = playerPosition.x+movx;
+        float destiy = playerPosition.y+movy;
     
         //Calcula l'equivalent del punt de la pantalla on esta el player en la imatge de background
 		float px, py;
@@ -114,13 +114,13 @@ int main(){
 				playerPosition.y = destiy;
 			}
 			else {
-				playerPosition.x = spriteSize.x;
-				playerPosition.y = spriteSize.y;
+				playerPosition.x = 1;
+				playerPosition.y = 1;
 			}
 		}
 		else {
-			playerPosition.x = spriteSize.x;
-			playerPosition.y = spriteSize.y;
+			playerPosition.x = 1;
+			playerPosition.y = 1;
 		}
         
         //Setting movement variables to 0
@@ -134,13 +134,11 @@ int main(){
 			if(!pTexture.loadFromFile("sprites3.png")) std::cout << "personatge Not Loaded " << std::endl;
 			if(!image.loadFromFile("ground2.png")) std::cout << "ground Image Not Loaded " << std::endl;
 			if(!tbackground.loadFromImage(image)) std::cout << "background texture Not Loaded " << std::endl;
-			playerPosition.x = 1;
-			playerPosition.y = 1;
+			playerPosition.x = 1;	playerPosition.y = 1;
 		}
         else if (playerPosition.y < 0) playerPosition.y = 0;
         else if (playerPosition.y > aux) {
-			playerPosition.x = spriteSize.x;
-			playerPosition.y = spriteSize.y;
+			playerPosition.x = 1;   playerPosition.y = 1;
 		}
         
         
